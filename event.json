@@ -1,0 +1,5 @@
+{
+  "body": {
+    "query": "{ message: echo(message: \"testing\") }"
+  }
+}
