@@ -4,11 +4,11 @@
   "description": "Serverless GraphQL echo example",
   "main": "handler.js",
   "scripts": {
-    "coverage": "nyc npm t",
-    "deploy": "npm t && serverless deploy",
+    "coverage": "nyc npm test",
+    "deploy": "npm test && serverless deploy",
     "invoke": "serverless webpack invoke --function graphql --path ./event.json",
     "serve": "serverless webpack serve",
-    "test": "mocha ./tests/echo.spec.js --compilers js:babel-register"
+    "test": "mocha test --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
