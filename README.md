@@ -1,4 +1,4 @@
-# Serverless GraphQL Echo
+# Serverless GraphQL Echo Example
 
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 
@@ -10,7 +10,7 @@ A GraphQL "echo" example that uses Serverless v1.0. This is simply meant to be a
 `npm run deploy` will run the tests then deploy to AWS
 
 ### Test
-`npm run test` will run the test suite and `npm run coverage` will give you the test coverage.
+`npm test` will run the tests and `npm run coverage` will give you the test coverage.
 
 ### Run a function locally
 `npm run invoke` will invoke the handler locally with `event.json`
