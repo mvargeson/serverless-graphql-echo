@@ -1,6 +1,6 @@
 /* global describe, it */
 import { expect } from 'chai';
-import { graphql as handler } from '../handler';
+import handler from '../functions/graphql/handler';
 
 describe('Echo Query', () => {
   it('should get a message', (done) => {

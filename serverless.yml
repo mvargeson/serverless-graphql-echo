@@ -1,13 +1,38 @@
 service: graphql
-provider: aws
-runtime: nodejs4.3
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+  stage: dev
+
 plugins:
   - serverless-webpack
 
+package:
+  include:
+    - node_modules
+    - functions
+  exclude:
+    - .nyc_output
+    - .serverless
+    - .webpack
+    - coverage
+    - test
+    - .babelrc
+    - .eslintignore
+    - .eslintrc
+    - .gitignore
+    - LICENSE
+    - package.json
+    - README.md
+    - serverless.yml
+    - webpack.config.js
+
 functions:
   graphql:
-    handler: handler.graphql
+    handler: index.graphql
     events:
       - http:
-         path: graphql
-         method: post
+          path: graphql
+          method: post
+          cors: true

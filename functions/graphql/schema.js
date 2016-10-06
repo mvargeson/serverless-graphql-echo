@@ -22,4 +22,3 @@ const Schema = new GraphQLSchema({
 });
 
 export default Schema;
-
